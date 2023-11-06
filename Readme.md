@@ -16,10 +16,11 @@ cp ~/.kube/config kubeconf.conf
 ### keys
 
 
-| key                            | description        |  
-|--------------------------------|--------------------|
-| Enter                          | enter each item    | 
-| backspace or control-backspace | return item before | 
-| d                              | delete pod (use carefully)|
-| m                              | over logs, get new logs|
+| key                            | description                |  
+|--------------------------------|----------------------------|
+| enter                          | enter each item            | 
+| backspace or control-backspace | return item before         | 
+| d                              | delete pod (use carefully) |
+| m                              | over logs, get new logs    |
+| q                              | exit                       |
 
