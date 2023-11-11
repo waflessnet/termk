@@ -9,6 +9,8 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
+	"sort"
+	"strings"
 )
 
 type nodeValue string
@@ -57,6 +59,7 @@ func GetNameSpaces(client *kubernetes.Clientset) []string {
 	for _, c := range namespaces.Items {
 		n = append(n, c.Name)
 	}
+	sort.Strings(n)
 	return n
 }
 
@@ -66,9 +69,12 @@ func GetClusters() []string {
 	var clusters []string
 
 	for _, c := range la.Contexts {
-		clusters = append(clusters, c.Cluster)
+		if strings.Trim(c.Cluster, "") != "" {
+			clusters = append(clusters, c.Cluster)
+		}
 	}
 
+	sort.Strings(clusters)
 	return clusters
 }
 
@@ -83,6 +89,7 @@ func GetPods(client *kubernetes.Clientset, namespace string) []string {
 		//p = append(p, c.Name)
 		// println(c.Name + "  ->  " + string(c.Status.Phase) + " ->  " + c.Status.PodIP)
 	}
+	sort.Strings(p)
 	return p
 }
 

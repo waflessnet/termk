@@ -15,12 +15,21 @@ cp ~/.kube/config kubeconf.conf
 
 ### keys
 
+Common keys on screens 
 
-| key                            | description                |  
-|--------------------------------|----------------------------|
-| enter                          | enter each item            | 
-| backspace or control-backspace | return item before         | 
-| d                              | delete pod (use carefully) |
-| m                              | over logs, get new logs    |
-| q                              | exit                       |
+| key                                | description                                |  
+|------------------------------------|--------------------------------------------|
+| <enter>                            | enter each item                            | 
+| <backspace> <ctrl-backspace> <esc> | return item before                         | 
+| <ctrl-q>                           | delete pod (use carefully)                 |
+| r                                  | update the list of namespaces, pods, logs. |
+| g                                  | top                                        |
+| G                                  | Buttom                                     |
+| J                                  | Down                                       |
+| k                                  | up                                         |
+| <C-d>                              | Page Down                                  |
+| <C-u>                              | Page Up                                    |
+| q                                  | exit program                               |
 
+### Logs
+Get last 500 record logs POD
