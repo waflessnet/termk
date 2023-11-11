@@ -153,6 +153,7 @@ func ShowLogPod(client *kubernetes.Clientset, cluster string, namespace string, 
 	}
 
 	list := widgets.NewList()
+	// list.Title = "[pod-fancy]"
 	list.Title = "[" + pod + "]"
 	list.Rows = last
 	list.TextStyle = ui.NewStyle(ui.ColorYellow)
@@ -163,6 +164,7 @@ func ShowLogPod(client *kubernetes.Clientset, cluster string, namespace string, 
 	}
 	//
 	info := InfoK(cluster, namespace, pod)
+	//info := InfoK("k8-fancy", "namespace-fancy", "pod-fancy")
 	RenderList(list, info)
 	previousKey := ""
 	uiEvents := ui.PollEvents()

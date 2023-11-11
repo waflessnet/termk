@@ -1,6 +1,6 @@
 # TermK
 
-Easy show log pods using kubeconf over multiples cluster
+Easy show log pods using kubeconf over multiples cluster k8
 
 ![show_logs_one_pod.png](images%2Fshow_logs_one_pod.png)
 

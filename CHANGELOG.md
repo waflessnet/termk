@@ -1,6 +1,6 @@
 # Change Log
 
-## [v0.2.1-alpha] - yyyy-mm-dd
+## [v0.2.1-alpha] - 2023-11-11
 
 Change order ui list and info cluster selected
 
