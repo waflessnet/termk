@@ -12,7 +12,7 @@ download last release from repo https://github.com/waflessnet/termk/releases
 
 Linux Family 
 ```bash
-wget https://github.com/waflessnet/termk/releases/download/v0.2.1-alpha/termk-linux-amd64 -o /tmp/termk && sudo mv termk-linux-amd64 /usr/local/bin/termk && sudo chmod +x /usr/local/bin/termk
+wget https://github.com/waflessnet/termk/releases/download/v0.2.2-alpha/termk-linux-amd64 -o /tmp/termk && sudo mv termk-linux-amd64 /usr/local/bin/termk && sudo chmod +x /usr/local/bin/termk
 ```
 
 
