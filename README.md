@@ -7,8 +7,8 @@ Easy show log pods using kubeconf over multiples cluster k8
 
 ### Install 
 
-download last release from repo https://github.com/waflessnet/termk/releases send your path env.
-can download with script:
+download last release from repo https://github.com/waflessnet/termk/releases 
+ or can download with script:
 
 Linux Family 
 ```bash
