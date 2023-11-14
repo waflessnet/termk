@@ -1,5 +1,15 @@
 # Change Log
 
+## [v0.2.2-alpha] - 2023-11-14
+
+Add flag parse path config kubernetes
+
+### Added
+- Flag --kconfig
+### Changed
+- documentation and use termK
+### Fixed
+
 ## [v0.2.1-alpha] - 2023-11-11
 
 Change order ui list and info cluster selected

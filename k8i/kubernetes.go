@@ -3,12 +3,14 @@ package k8i
 import (
 	"bytes"
 	"context"
+	"fmt"
 	"io"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
+	"os"
 	"sort"
 	"strings"
 )
@@ -65,7 +67,12 @@ func GetNameSpaces(client *kubernetes.Clientset) []string {
 
 func GetClusters() []string {
 	file := GetPathKubeConfig()
-	la, _ := clientcmd.LoadFromFile(file)
+	la, err := clientcmd.LoadFromFile(file)
+	if err != nil {
+		//panic("check filepath kubeconfig")
+		fmt.Println("\n check filepath kubeconfig \n ")
+		os.Exit(1)
+	}
 	var clusters []string
 
 	for _, c := range la.Contexts {
